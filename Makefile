@@ -12,7 +12,7 @@ OBJS += main.o	\
 
 #FORCE_STATIC := --static
 
-LOCAL_MODULE  := hextool
+LOCAL_MODULE  := hextools
 
 SWAP_SYM_MODULE  := hexswap
 
@@ -34,4 +34,5 @@ $(LOCAL_MODULE): $(OBJS)
 	@echo "--Compiling '$(LOCAL_MODULE)' ..."
 	@$(CC) $^ -o $@ $(FORCE_STATIC)
 	@$(STRIP) $@
-	-ln -s $@ $(SWAP_SYM_MODULE)
+	@ln -sf $@ $(SWAP_SYM_MODULE)
+
