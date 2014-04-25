@@ -1,2 +1,6 @@
 
 .tags*
+
+*.o
+hexswap
+hextools
